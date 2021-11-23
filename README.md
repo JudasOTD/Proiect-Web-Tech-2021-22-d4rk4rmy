@@ -6,7 +6,7 @@ Limbajul de programare folosit in general este Javascript, standardul de numire 
 
 Exista stocare persistenta intr-o baza de date relationala (?SQLite?)
 
-Front-endul este compus din componente React. Adopta arhitectura SPA (Single-Page-Application) in care utilizatorul interactioneaza cu interfata, iar pagina web este rescrisa dinamic, generand date noi de pe server.
+Front-endul este compus din componente React. Adopta arhitectura SPA (Single-Page-Application) in care utilizatorul interactioneaza cu interfata, iar pagina web este rescrisa dinamic, generand date noi de pe server. Structura paginii este HTML si scripturi de VanillaJS. Este o pagina responsive d.p.dv al CSS.
 
 Back-end-ul este un API REST scris in node. Protocolul de comunicatii folosit este HTTP. Sunt implementate cererile http intr-un sistem de rutare a operatiilor de pe site.
 
