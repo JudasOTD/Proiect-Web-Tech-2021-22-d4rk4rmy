@@ -2,15 +2,15 @@
 Aplicatie Web pentru Acordarea de Note Anonime / 
 
 
-Arhitectura: Front-End + Back-End
+Arhitectura: Front-End & Back-End
 
 Limbajul de programare folosit in general este Javascript, standardul de numire este camelCase
 
 Exista stocare persistenta intr-o baza de date relationala (?SQLite?)
 
-Front-endul este compus din componente React. Adopta arhitectura SPA (Single-Page-Application) in care utilizatorul interactioneaza cu interfata, iar pagina web este rescrisa dinamic, generand date noi de pe server. Structura paginii este HTML si scripturi de VanillaJS. Este o pagina responsive d.p.dv al CSS.
+Front-endul este compus din componente React. Adopta arhitectura SPA (Single-Page-Application) in care utilizatorul interactioneaza cu interfata, iar pagina web este rescrisa dinamic, generand date noi de pe server. Structura paginii consta in HTML si scripturi de VanillaJS. Pagina este responsive d.p.dv al CSS.
 
-Back-end-ul este un API REST scris in node. Protocolul de comunicatii folosit este HTTP. Sunt implementate cererile http intr-un sistem de rutare a operatiilor de pe site.
+Back-end-ul este un API REST scris in node, ceea ce inseamna ca majoritatea tranzactiilor (request-response) constau in fisiere JSON, acronim pentru Javascript Object Notation, care sunt lizibile pentru oameni si calculatoare. Avantajele acestui API sunt viteza mare de procesare, uzul eficient si costurile reduse de memorie. Protocolul de comunicatii folosit este HTTP. Cererile http sunt implementate intr-un sistem de rutare a operatiilor de pe site.
 
 
 
