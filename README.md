@@ -1,4 +1,4 @@
-# Proiect-Tehnologii-Web-2021-22-d4rk4rmy
+# Specificatii-proiect-Tehnologii-Web-d4rk4rmy-2021-22
 Aplicatie Web pentru Acordarea de Note Anonime / 
 Cancel changes
 Arhitectura: Front-End + Back-End
