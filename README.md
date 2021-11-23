@@ -13,6 +13,11 @@ Back-end-ul este un API REST scris in node. Protocolul de comunicatii folosit es
 Descriere:
 ==========
 Prin intermediul interfetei pot fi inregistrate proiecte carora se ataseaza livrabile (dependente de o data in timp, eg. deadline) si videouri de prezentare, ori un link catre un videoclip. 
-Oricine se inregistreaza devine posibil evaluator al altor proiecte. La fiecare data de livrare a oricarui proiect pot fi selectati aleator membri care sa faca parte din juriu (identificabili dupa un id case-insensitive, ori un cookie). 
-Fiecare proiect dispune de un juriu. Fiecare membru al acestui juriu este anuntat printr-o notificare de proiectul pe care trebuie sa il noteze. Juriul acorda note intre 1 si 10. Nota finala se calculeaza ca medie cu doua cifre fractionare, excluzand outlierii. Nota este anonima, in sensul ca alti membri nu pot vedea cine voteaza. Interfata de notare vine ca extensie a partii de inscriere a proiectului, si este accesibila doar celor care au fost au fost selectati. Ea este afisata sub formularul de postare a proiectelor.
+
+Oricine se inregistreaza devine posibil evaluator al altor proiecte. La fiecare data de livrare a oricarui proiect pot fi selectati aleator membri care sa faca parte din juriu (identificabili dupa un id case-insensitive, ori un cookie).
+
+Fiecare proiect dispune de un juriu. Fiecare membru al acestui juriu este anuntat printr-o notificare de proiectul pe care trebuie sa il noteze. Juriul acorda note intre 1 si 10. Nota finala se calculeaza ca medie cu doua cifre fractionare, excluzand outlierii. Nota este anonima, in sensul ca alti membri nu pot vedea cine voteaza.
+
+Interfata de notare vine ca extensie a partii de inscriere a proiectului, si este accesibila doar celor care au fost au fost selectati. Ea este afisata sub formularul de postare a proiectelor.
+
 Este implementat un sistem de permisiuni care ofera membrilor juriului posibilitatea de a modifica notele acordate, intr-un interval predefinit. Utilizatorii standard pot vedea notele, dar nu si cine a votat.
