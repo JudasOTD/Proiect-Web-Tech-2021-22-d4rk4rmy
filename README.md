@@ -3,6 +3,7 @@ Aplicatie Web pentru Acordarea de Note Anonime /
 
 
 Arhitectura: Front-End + Back-End
+
 Limbajul de programare folosit in general este Javascript, standardul de numire este camelCase
 
 Exista stocare persistenta intr-o baza de date relationala (?SQLite?)
