@@ -1,7 +1,3 @@
-// Acest fisier contine API-ul REST generat in node.js
-// Sunt implementate operatii de rutare cu obiect.json tip Review
-
-// Ulterior vom defini clasa Review si vom perfectiona viteza de redare a informatiilor
 // Importarea modulelor
 const bodyParser = require('body-parser')
 const express = require('express')
@@ -35,24 +31,30 @@ app.get('/comments', (req,res) => {
     res.status(200).json(arrayReviews)
 })
 
-//get/projects  returneaza toate proiectele
-//get/projects:id  returneaza comentariile acordate unui proiect identificabil
+// Returneaza toate proiectele
+app.get('/projects', (req,res)=> {
+    res.status(200).json(arrayProiecte)
+})
+
+
+// Vizualizati notele si comentariile acordate de jurati unui anumit proiect
+//identificabil dupa idProiect. ID-ul juratilor este privat
+app.get('/pro/project/:id', (req,res) => {
+    res.status(200).json(arrayReviews)
+})
 
 //post/projects adauga un proiect (validat prin input in SPA.html)
+
 //post/projects/:id .  adauga nota si comentariu la proiect
 
 //patch/projects/:idJurat  editeaza comentariul si nota in cazul in care un jurat vrea asta (trebuie cunoscut id-ul)
 //delete/project/:idJurat  sterge nota si comment
 
-// Vizualizati notele acordate de jurati unui anumit proiect
-//identificabil dupa idProiect. ID-ul juratilor este privat
-app.get('/pro/project/:id', (req,res) => {
-    res.status(200)
-})
 
 
 // Obiect json cu notele livrabilelor
-// Acesta va fi preluat dintr-un fisier pentru eficienta in gestionarea intrarilor in urma acordarii de note
+// Acesta va fi preluat dintr-un fisier si modelat sub forma unei clase
+//pentru eficienta in gestionarea intrarilor in urma acordarii de note
 const arrayReviews = [
     {idProiect: 1, idJuriu: 10001, nrStelute: 10, comentariu: "Sursa excelenta de date."},
     {idProiect: 2, idJuriu: 10002, nrStelute: 9, comentariu: "documentare pertinenta a instalatiilor"},
