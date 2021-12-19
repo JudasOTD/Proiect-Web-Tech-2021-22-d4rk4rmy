@@ -1,0 +1,43 @@
+<html>
+  
+  <head>
+    <title> Acorda Nota </title>
+    <link href = "styles.css" rel="stylesheet">
+  </head>
+  
+  
+  <body>
+    
+    <container id="containerDate">
+      <div>
+          <p>
+            <h4>Aplicatie pentru evaluarea livrabilelor partiale</h4>
+            <span>Introdu un videoclip sau un link spre video &nbsp;
+              <input type="file" id="controlFisier">
+              <input type="text" id="controlText">
+              <button type="button" id="btnPOST">Trimite</button>
+            </span>
+          </p>
+      </div>
+    </container>
+    
+    
+    <container id="containerVizualizare">
+      <div>
+        <canvas id="canvasVizualizare" height="360" width="640">Browserul tau nu suporta elementul canvas.</canvas>
+      </div>
+
+      <video id="video" muted loop controls style="display: none;">
+        Browserul tau nu accepta elementul video. 
+      </video>
+    </container>
+    
+    
+    <container id="containerNotare">
+      <span>Acorda nota &nbsp;</span> <input type="radio" value="5" />
+    </container>
+
+    <script src="Scripts.js"></script>
+    <script><alert>Faceti parte din juriul cu ID#</alert></script>
+  </body>
+</html>
