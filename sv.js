@@ -45,6 +45,16 @@ app.get('/projects/:id', (req,res) => {
 })
 
 //post/projects adauga un proiect (validat prin input in SPA.html)
+app.post('/projects', (req, res)=>{
+    console.log('Ruta POST pentru adaugarea de proiecte a fost apelata.')
+    const denumire = req.body.denumire
+    const pj = {
+        "idProiect" : ++contorGlobal,
+        denumire }
+    arrayProiecte.push(pj) 
+    
+    res.status(200).send("\nProiect inregistrat cu succes.\nIdentificabil dupa ID#" + contorGlobal)
+})
 
 //post/projects/:id .  adauga nota si comentariu la proiect
 
@@ -70,3 +80,6 @@ const arrayProiecte = [
     {idProiect: 2, denumire: "Site cinematografic"},
     {idProiect: 3, denumire: "Test"}
 ]
+
+var contorGlobal = arrayProiecte.length
+
