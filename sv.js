@@ -39,7 +39,7 @@ app.get('/projects', (req,res)=> {
 
 // Vizualizati notele si comentariile acordate de jurati unui anumit proiect
 //identificabil dupa idProiect. ID-ul juratilor este privat
-app.get('/pro/project/:id', (req,res) => {
+app.get('/projects/:id', (req,res) => {
     res.status(200).json(arrayReviews)
 })
 
@@ -48,7 +48,7 @@ app.get('/pro/project/:id', (req,res) => {
 //post/projects/:id .  adauga nota si comentariu la proiect
 
 //patch/projects/:idJurat  editeaza comentariul si nota in cazul in care un jurat vrea asta (trebuie cunoscut id-ul)
-//delete/project/:idJurat  sterge nota si comment
+//delete/project/:idJurat  sterge  comment
 
 
 
