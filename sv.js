@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json()) 
 app.use(bodyParser.json())
 
-app.use(express.urlencoded({extended:true})) // Parsare requesturi sub encoding UTF8 
+app.use(express.json({extended:true})) // Parsare requesturi sub encoding UTF8 
 
 // Server config
 const PORT = 5500;
@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 
 // Default r00t 
 app.get('/pro', (req, res) => {
-    res.status(201).send(`The D4RK4RMY api. \nLive on port ${PORT}`)
+    res.status(202).send(`The D4RK4RMY api. \nLive on port ${PORT}`)
 })
 
 // Redirect '/' to root
@@ -41,7 +41,12 @@ app.get('/projects', (req,res)=> {
 // Vizualizati notele si comentariile acordate de jurati unui anumit proiect
 //identificabil dupa idProiect. ID-ul juratilor este privat
 app.get('/projects/:id', (req,res) => {
-    res.status(200).json(arrayReviews)
+    const id = req.params.id
+    try{
+      res.status(201).json(raport(id))  
+    } catch {
+        res.status(404).send(`Proiectul cu ID#${id} nu exista. Incercati altceva.`)
+    }
 })
 
 //post/projects adauga un proiect (validat prin input in SPA.html)
@@ -83,3 +88,26 @@ const arrayProiecte = [
 
 var contorGlobal = arrayProiecte.length
 
+const raport = function(ID) {
+    //ID este preluat din req.params si transmis sub forma de string.
+    //ID trebuie convertit
+    var proj = arrayProiecte.find((p) => p.idProiect === parseInt(ID))
+    var comm = arrayReviews.filter(function(obj) {
+        return obj.idProiect === parseInt(ID)
+    })
+ 
+    var note = new Array()
+    var comentarii = new Array()
+    for(let i = 0; i < comm.length; i++) {
+        note.push(comm[i].nrStelute)
+        comentarii.push(comm[i].comentariu)
+    }
+
+    const raport = {
+        "idProiect" : ID,
+        "denumire" : proj.denumire,
+        "note" : note,
+        "comentarii" : comentarii
+    }
+    return(raport)
+}
