@@ -22,7 +22,8 @@ app.get('/pro', (req, res) => {
 
 // Redirect '/' to root
 app.get('/', (req, res) => {
-    
+    const q = encodeURIComponent('pro')
+    res.redirect('/' + q)
 })
 
 
