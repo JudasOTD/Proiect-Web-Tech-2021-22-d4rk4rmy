@@ -47,7 +47,7 @@ app.get('/comments', (req,res) => {
 // Vizualizati notele acordate de jurati unui anumit proiect
 //identificabil dupa idProiect. ID-ul juratilor este privat
 app.get('/pro/project/:id', (req,res) => {
-    res.status(200).json(arrayReviews)
+    res.status(200)
 })
 
 
