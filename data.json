@@ -1,0 +1,199 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Site React",
+      "notes": [
+        { "user": "test2@example.com", "note": "10" },
+        { "user": "test3@example.com", "note": 3 },
+        { "user": "test5@example.com", "note": 6 }
+      ],
+      "livrabile": [
+        {
+          "id": 1,
+          "name": "Backend",
+          "description": "write backend code Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "date": "2022-01-21T01:07:41.480Z",
+          "completed": "false"
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "description": "write frontend Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "date": "2022-01-21T01:07:41.480Z",
+          "completed": "true"
+        },
+        {
+          "id": 3,
+          "name": "deploy site",
+          "description": "deploy using aws Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "date": "2022-01-21T01:07:41.480Z",
+          "completed": "false"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "alt site react",
+      "notes": [
+        { "user": "test2@example.com", "note": "5" },
+        { "user": "test3@example.com", "note": 4 },
+        { "user": "test5@example.com", "note": 2 }
+      ],
+      "livrabile": [
+        {
+          "id": 1,
+          "name": "Backend",
+          "description": "write backend code Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "date": "2022-01-21T01:07:41.480Z",
+          "completed": "false"
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "description": "write frontend Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "date": "2022-01-21T01:07:41.480Z",
+          "completed": "false"
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "id": 3,
+      "notes": [
+        { "user": "test5@example.com", "note": 0 },
+        { "user": "test3@example.com", "note": 0 },
+        { "user": "test8@example.com", "note": 0 }
+      ],
+      "livrabile": [
+        {
+          "name": "test the api",
+          "description": "do it",
+          "video": "https://www.youtube.com/watch?v=vTkUlqFqWpc",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "name": "another project",
+      "id": 4,
+      "notes": [
+        { "user": "test2@example.com", "note": "5" },
+        { "user": "test8@example.com", "note": "3" },
+        { "user": "test3@example.com", "note": "6" }
+      ],
+      "livrabile": [
+        {
+          "name": "test the project",
+          "description": "just test it",
+          "video": "https://www.youtube.com/watch?v=n0IuXnL_cWs",
+          "id": 1,
+          "date": "2022-01-21T04:45:34.858Z"
+        },
+        {
+          "name": "another one",
+          "description": "yes",
+          "video": "https://www.youtube.com/watch?v=n0IuXnL_cWs",
+          "id": 2,
+          "date": "2022-01-21T04:47:32.184Z",
+          "completed": false
+        },
+        {
+          "name": "yes",
+          "description": "yes",
+          "video": "https://www.youtube.com/watch?v=n0IuXnL_cWs",
+          "id": 3,
+          "date": "2022-01-21T04:48:48.097Z",
+          "completed": false
+        },
+        {
+          "name": "test",
+          "description": "test",
+          "video": "https://www.youtube.com/watch?v=n0IuXnL_cWs",
+          "id": 4,
+          "date": "2022-01-21T04:51:00.190Z",
+          "completed": false
+        },
+        {
+          "name": "test",
+          "description": "test",
+          "video": "https://www.youtube.com/watch?v=n0IuXnL_cWs",
+          "id": 5,
+          "date": "2022-01-21T04:52:27.806Z",
+          "completed": false
+        },
+        {
+          "name": "",
+          "description": "",
+          "video": "",
+          "id": 6,
+          "date": "2022-01-21T12:39:51.299Z",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "name": "alt proiect",
+      "id": 5,
+      "notes": [
+        { "user": "test7@example.com", "note": 0 },
+        { "user": "test6@example.com", "note": 0 },
+        { "user": "test8@example.com", "note": 0 }
+      ],
+      "livrabile": []
+    },
+    {
+      "name": "proiect test nou",
+      "id": 6,
+      "notes": [
+        { "user": "test8@example.com", "note": "5" },
+        { "user": "test7@example.com", "note": "8.25" },
+        { "user": "test5@example.com", "note": "2.40" }
+      ],
+      "livrabile": [
+        {
+          "name": "livrabial test",
+          "description": "descriere",
+          "video": "https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1",
+          "id": 1,
+          "date": "2022-01-21T12:13:21.841Z",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "name": "alt proiect de creat",
+      "id": 7,
+      "notes": [
+        { "user": "test2@example.com", "note": "3" },
+        { "user": "test7@example.com", "note": "7.5" },
+        { "user": "test3@example.com", "note": 0 }
+      ],
+      "livrabile": [
+        {
+          "name": "un alt livrabil",
+          "description": "livrat",
+          "video": "https://www.youtube.com/embed/NXiWEaXqFv4?playlist=tgbNymZ7vqY&loop=1",
+          "id": 1,
+          "date": "2022-01-21T12:44:46.872Z",
+          "completed": false
+        }
+      ]
+    }
+  ],
+  "users": [
+    { "email": "test1@example.com", "password": "test1", "role": "PM" },
+    { "email": "test2@example.com", "password": "test2", "role": "STUDENT" },
+    { "email": "test3@example.com", "password": "test3", "role": "STUDENT" },
+    { "email": "test4@example.com", "password": "test4", "role": "PROFESSOR" },
+    { "email": "test5@example.com", "password": "test5", "role": "STUDENT" },
+    { "email": "test6@example.com", "password": "test6", "role": "STUDENT" },
+    { "email": "test7@example.com", "password": "test7", "role": "STUDENT" },
+    { "email": "test8@example.com", "password": "test8", "role": "STUDENT" }
+  ]
+}
