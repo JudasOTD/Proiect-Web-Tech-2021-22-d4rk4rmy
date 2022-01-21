@@ -1,6 +1,7 @@
 // Importarea modulelor
 const bodyParser = require('body-parser')
 const express = require('express')
+const res = require('express/lib/response')
 const app = express()
 
 // Parseaza date ca json prin middleware
@@ -27,20 +28,14 @@ app.get('/', (req, res) => {
 })
 
 
-// Vizualizati toate notele printr-un GET general
-app.get('/comments', (req,res) => {
-    res.status(200).json(arrayReviews)
-})
-
-// Returneaza toate proiectele
+// Returneaza toate proiectele inscrise
 app.get('/projects', (req,res)=> {
     res.status(200).json(arrayProiecte)
 })
 
-
 // Vizualizati notele si comentariile acordate de jurati unui anumit proiect
 //identificabil dupa idProiect. ID-ul juratilor este privat
-app.get('/projects/:id', (req,res) => {
+app.get('/project/:id', (req,res) => {
     const id = req.params.id
     try{
       res.status(201).json(raport(id))  
@@ -49,27 +44,48 @@ app.get('/projects/:id', (req,res) => {
     }
 })
 
-//post/projects adauga un proiect (validat prin input in SPA.html)
-app.post('/projects', (req, res)=>{
-    console.log('Ruta POST pentru adaugarea de proiecte a fost apelata.')
-    const denumire = req.body.denumire
-    const pj = {
-        "idProiect" : ++contorGlobal,
-        denumire }
-    arrayProiecte.push(pj) 
-    
-    res.status(200).send("\nProiect inregistrat cu succes.\nIdentificabil dupa ID#" + contorGlobal)
+// Un profesor poate vizualiza toate notele acordate tuturor proiectelor
+app.get('/projects/prof', (req,res) => {
+    var jsonObj = []
+    for(let i = 0; i < arrayProiecte.length; i++) {
+        const a = raport(arrayProiecte[i].idProiect)
+        jsonObj.push(a)
+    }
+    res.status(200).json(jsonObj)
 })
 
-//post/projects/:id .  adauga nota si comentariu la proiect
+// POST/projects adauga un proiect (validat)
+app.post('/project', (req, res)=>{
+    console.log('Ruta POST pentru adaugarea de proiecte a fost apelata.')
+    try{
+       if(req.body.denumire.length === 0 || req.body.denumire === null){
+        res.status(406).send("\nNu pot fi create obiecte fără nume.")
+    } else  {
+        const denumire = req.body.denumire
+        const pj = {
+        "idProiect" : ++contorGlobal,
+        denumire }
+        arrayProiecte.push(pj) 
+        res.status(201).send("\nProiect inregistrat cu succes.\nIdentificabil dupa ID#" + contorGlobal)
+    } 
+    } catch(e){
+        console.log(e.name)
+        res.status(400).send(e.name)
+    }
+    
+    
+})
 
-//patch/projects/:idJurat  editeaza comentariul si nota in cazul in care un jurat vrea asta (trebuie cunoscut id-ul)
-//delete/project/:idJurat  sterge  comment
+//post/project/:id .  adauga nota si comentariu la proiect
+
+//patch/project/:idJurat editeaza comentariul si nota in cazul in care un jurat vrea asta (trebuie cunoscute credentialele)
+//delete/project/:idJurat sterge comment
 
 
 
-// Obiect json cu notele livrabilelor
-// Acesta va fi preluat dintr-un fisier si modelat sub forma unei clase
+
+// Obiecte json cu notele livrabilelor
+// Ele vor fi preluate dintr-un fisier
 //pentru eficienta in gestionarea intrarilor in urma acordarii de note
 const arrayReviews = [
     {idProiect: 1, idJuriu: 10001, nrStelute: 10, comentariu: "Sursa excelenta de date."},
@@ -86,10 +102,11 @@ const arrayProiecte = [
     {idProiect: 3, denumire: "Test"}
 ]
 
+
 var contorGlobal = arrayProiecte.length
 
 const raport = function(ID) {
-    //ID este preluat din req.params si transmis sub forma de string.
+    //ID este preluat din req.params si transmis sub forma de  string
     //ID trebuie convertit
     var proj = arrayProiecte.find((p) => p.idProiect === parseInt(ID))
     var comm = arrayReviews.filter(function(obj) {
