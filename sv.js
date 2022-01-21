@@ -4,11 +4,11 @@ const express = require('express')
 const res = require('express/lib/response')
 const app = express()
 
-// Parseaza date ca json prin middleware
+// Parsare JSON
 app.use(express.json()) 
 app.use(bodyParser.json())
 
-app.use(express.json({extended:true})) // Parsare requesturi sub encoding UTF8 
+app.use(express.json({extended:true})) // UTF8 
 
 // Server config
 const PORT = 5500;
@@ -85,7 +85,7 @@ app.post('/project', (req, res)=>{
 
 
 // Obiecte json cu notele livrabilelor
-// Ele vor fi preluate dintr-un fisier
+// Ele pot fi preluate dintr-un fisier
 //pentru eficienta in gestionarea intrarilor in urma acordarii de note
 const arrayReviews = [
     {idProiect: 1, idJuriu: 10001, nrStelute: 10, comentariu: "Sursa excelenta de date."},
